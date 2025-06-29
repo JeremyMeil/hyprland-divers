@@ -1,0 +1,2 @@
+# hyprland-divers
+dotfiles etc
