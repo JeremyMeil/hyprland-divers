@@ -1,0 +1,26 @@
+
+configuration {
+  drun-display-format: "{name}";
+  show-icons: true;
+  hover-select: true;
+  me-select-entry: ""; 
+  me-accept-entry: "MousePrimary";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+//@theme "/home/jeremy/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+//@theme "/home/jeremy/.local/share/rofi/themes/windows11-grid-dark.rasi"
+
+//@theme "/home/jeremy/.local/share/rofi/themes/launchpad.rasi"
+
+//@theme "/home/jeremy/.local/share/rofi/themes/windows11-grid-dark.rasi"
+
+@theme "/home/jeremy/.local/share/rofi/themes/spotlight-dark.rasi"

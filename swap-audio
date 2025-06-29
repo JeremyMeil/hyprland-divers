@@ -1,0 +1,19 @@
+#!/bin/bash
+
+CARD1="alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.analog-stereo"
+CARD2="alsa_output.pci-0000_03_00.1.hdmi-stereo-extra3"
+SOURCE1="alsa_output.usb-Logitech_PRO_X_Wireless_Gaming_Headset-00.analog-stereo.monitor"
+SOURCE2="alsa_output.pci-0000_03_00.1.hdmi-stereo-extra3.monitor"
+
+
+CURRENT_SINK=$(pacmd stat | awk -F": " '/^Default sink name: /{print $2}')
+CURRENT_SOURCE=$(pacmd stat | awk -F": " '/^Default sink name: /{print $2}')
+
+if [ $CURRENT_SINK == $CARD1 ]; then
+	pacmd set-default-sink $CARD2
+	pacmd set-default-source $SOURCE2
+else
+	pacmd set-default-sink $CARD1
+        pacmd set-default-source $SOURCE1
+fi
+
